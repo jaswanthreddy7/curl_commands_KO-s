@@ -15,34 +15,34 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
     let endpoint = '';
     switch (knowledgeObject) {
         case 'data/props/extractions':
-            endpoint = '/servicesNS/-/-/data/props/extractions';
+            endpoint = ':8089/services/data/props/extractions';
             break;
         case 'data/ui/panels':
-            endpoint = '/servicesNS/-/-/data/ui/panels';
+            endpoint = ':8089/servicesNS/{user}/{app_name}/data/ui/panels';
             break;
         case 'data/ui/views':
-            endpoint = '/servicesNS/-/-/data/ui/views';
+            endpoint = ':8089/servicesNS/{user}/{app_name}/data/ui/views';
             break;
         case 'data/indexes':
-            endpoint = '/servicesNS/-/-/data/indexes';
+            endpoint = ':8089/servicesNS/-/-/data/indexes';
             break;
         case 'data/props/lookups':
-            endpoint = '/services/data/transforms/lookups';
+            endpoint = ':8089/services/data/props/lookups';
             break;
         case 'data/ui/alerts':
-            endpoint = '/servicesNS/-/-/data/ui/alerts';
+            endpoint = ':8089/servicesNS/-/-/data/ui/alerts';
             break;
         case 'data/ui/nav':
-            endpoint = '/servicesNS/-/-/data/ui/nav';
+            endpoint = ':8089/servicesNS/-/-/data/ui/nav';
             break;
         case 'data/transforms/lookups':
-            endpoint = '/servicesNS/-/-/data/transforms/lookups';
+            endpoint = ':8089/servicesNS/-/-/data/transforms/lookups';
             break;
         case 'data/ui/workflows':
-            endpoint = '/servicesNS/-/-/data/ui/workflows';
+            endpoint = ':8089/servicesNS/-/-/data/ui/workflows';
             break;
         case 'data/ui/fieldtransformations':
-            endpoint = '/servicesNS/-/-/data/ui/fieldtransformations';
+            endpoint = ':8089/servicesNS/-/-/data/ui/fieldtransformations';
             break;
         // Add more cases as needed
         default:
