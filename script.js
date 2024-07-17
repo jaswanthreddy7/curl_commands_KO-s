@@ -20,7 +20,7 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
     let endpoint = '';
     switch (knowledgeObject) {
         case 'admin/summarization':
-            endpoint = ':8089/services/admin/summarization';
+            endpoint = ':8089/services/admin/summarization/?by_tstats=1';
             break;
         case 'admin/summarization/tstats:DM_{app}_{data_model_ID}':
             endpoint = ':8089/services/admin/summarization/tstats:DM_{app}_{data_model_ID}';
@@ -83,13 +83,13 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
             endpoint = ':8089/services/data/ui/global-banner';
             break;
         case 'data/ui/panels':
-            endpoint = ':8089/services/data/ui/panels';
+            endpoint = ':8089/servicesNS/{user}/{app_name}/data/ui/panels';
             break;
         case 'data/ui/views':
-            endpoint = ':8089/services/data/ui/views';
+            endpoint = ':8089/servicesNS/{user}/{app_name}/data/ui/views';
             break;
         case 'data/ui/views/{name}':
-            endpoint = ':8089/services/data/ui/views/{name}';
+            endpoint = ':8089/servicesNS/{user}/{app_name}/data/ui/views/{name}';
             break;
         case 'datamodel/acceleration (DEPRECATED)':
             endpoint = ':8089/services/datamodel/acceleration';
