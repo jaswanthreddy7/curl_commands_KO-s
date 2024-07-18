@@ -9,13 +9,8 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
 
     const requestType = document.getElementById('requestType').value;
     const url = document.getElementById('url').value;
-    const authMethod = document.querySelector('input[name="authMethod"]:checked').value; // Updated to get selected authMethod
+    const authMethod = document.getElementById('authMethod').value;
     const knowledgeObject = document.getElementById('knowledgeObject').value;
-
-    console.log('Request Type:', requestType);
-    console.log('URL:', url);
-    console.log('Auth Method:', authMethod);
-    console.log('Knowledge Object:', knowledgeObject);
 
     let endpoint = '';
     switch (knowledgeObject) {
@@ -150,5 +145,6 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
         const token = document.getElementById('token').value;
         curlCommand += ` -H 'Authorization: Bearer ${token}'`;
     }
+
     document.getElementById('curlCommand').textContent = curlCommand;
 });
