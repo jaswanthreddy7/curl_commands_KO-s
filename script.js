@@ -150,8 +150,5 @@ document.getElementById('curl-form').addEventListener('submit', function(event) 
         const token = document.getElementById('token').value;
         curlCommand += ` -H 'Authorization: Bearer ${token}'`;
     }
-
-    console.log('Generated Curl Command:', curlCommand); // Log the generated curl command
-
     document.getElementById('curlCommand').textContent = curlCommand;
 });
